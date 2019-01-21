@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="content.css">
+</head>
+<script src="../src/robo-microbit.js"></script>
+
+<body>
+    <input type="button" value="Search devices" onclick="microbit.searchDevice();" />
+    <input type="button" value="Disconnect" onclick="microbit.disconnect();" />
+    <hr>
+    <h4>Device Info</h4>
+    <div id="device-name">device name: </div>
+    <div id="status">status: </div>
+    <hr>
+    <h4>ultrasonic ranger</h4>
+    <div>
+        Press A+B on your micro:bit to start ultrasonic ranger
+    </div>
+    <div id="ultrasonic-ranger">0 cm</div>
+    <hr>
+    <h4>accelerator</h4>
+    <div id="accelerator">Accelerator: X: 0 Y: 0 Z: 0</div>
+    <input type="button" id="accelerator-period-button" value="accelerator period" />
+    <input type="text" id="accelerator-period" value="160" />
+    <div>period can be 1, 2, 5, 10, 20, 80, 160 and 640 in ms. However, do not set 1, microbit will get disconnected!!!
+    </div>
+    <hr>
+    <h4>Button</h4>
+    <div class="microbit-button" id="microbit-button-a">A</div>
+    <div class="microbit-button" id="microbit-button-b">B</div>
+    <hr>
+    <h4>Temperature</h4>
+    <div id="temperature-value">Temperature</div>
+    <hr>
+    <h4>Speaker</h4>
+    <input type="range" id="pwm-range">
+    <input type="button" id='test-button' value='test button'>
+    <hr>
+    <input type="button" id="start-all-notification" value="start all notification" />
+    <input type="button" id="stop-all-notification" value="stop all notification" />
+    <div></div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
