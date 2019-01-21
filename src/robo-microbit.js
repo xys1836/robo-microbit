@@ -42,12 +42,19 @@ class RoboMicrobit {
     searchDevice() {
 
         const filters = [{
-            namePrefix: 'BBC micro:bit'
+            namePrefix: 'BBC micro:bit',
+            
         }]
 
         const options = {}
         // options.acceptAllDevices = true;
-        options.optionalServices = [BUTTON_SERVICE_UUID]
+        options.optionalServices = [
+                BUTTON_SERVICE_UUID, 
+                UART_SERVICE_UUID, 
+                IO_PIN_SERVICE_UUID, 
+                ACCELEROMETER_SERVICE_SERVICE_UUID, 
+                TEMPERATURE_SERVICE_UUID
+            ]
         options.filters = filters
 
         navigator.bluetooth.requestDevice(options).then(device => {
